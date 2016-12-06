@@ -16,6 +16,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import javafx.stage.Window;
 import mytunes.GUI.model.MyTunesModel;
 import mytunes.be.MyTunes;
@@ -67,5 +68,14 @@ public class SongController implements Initializable {
     void setMytunes(MyTunes newSong) {
         currentSong = newSong;
     }
+
+    @FXML
+    private void songCancel(ActionEvent event) {
+           // get a handle to the stage
+    Stage stage = (Stage) songCancel.getScene().getWindow();
+    // do what you have to do
+    stage.close();
+    }
+    
     
 }

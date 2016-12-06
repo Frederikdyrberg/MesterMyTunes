@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Slider?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="835.0" prefWidth="983.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="mytunes.GUI.controller.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="835.0" prefWidth="983.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mytunes.GUI.controller.FXMLDocumentController">
   <children>
     <Label fx:id="label" layoutX="9.0" layoutY="182.0" minHeight="16.0" minWidth="69.0" text="Playlists:">
       <font>
@@ -35,23 +32,23 @@
     <Button fx:id="newSong" layoutX="564.0" layoutY="609.0" mnemonicParsing="false" onAction="#NewSongAction" text="New.." />
     <Label layoutX="544.0" layoutY="182.0" text="Songs" />
     <Button fx:id="moveSong" contentDisplay="BOTTOM" font="$x1" layoutX="498.0" layoutY="203.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="46.0" text="←" textOverrun="LEADING_ELLIPSIS" />
-    <Button fx:id="close" layoutX="794.0" layoutY="609.0" mnemonicParsing="false" text="Close" />
+    <Button fx:id="closeApp" layoutX="794.0" layoutY="609.0" mnemonicParsing="false" onAction="#closeApp" text="Close" />
     <Slider fx:id="slider" layoutX="77.0" layoutY="142.0" prefHeight="14.0" prefWidth="90.0" />
     <Button fx:id="deletePlaylistSong" layoutX="432.0" layoutY="609.0" mnemonicParsing="false" text="Delete.." />
     <ListView layoutX="277.0" layoutY="203.0" prefHeight="393.0" prefWidth="215.0" />
     <TableView fx:id="tablePlaylist" layoutX="44.0" layoutY="203.0" prefHeight="393.0" prefWidth="215.0">
       <columns>
-        <TableColumn prefWidth="75.0" text="Song" fx:id="columnSong" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="70.0" text="Artist" fx:id="columnArtist" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="70.0" text="Time" fx:id="columnTime" />
+        <TableColumn fx:id="columnSong" prefWidth="75.0" text="Song" />
+        <TableColumn fx:id="columnArtist" maxWidth="5000.0" minWidth="10.0" prefWidth="70.0" text="Artist" />
+        <TableColumn fx:id="columnTime" maxWidth="5000.0" minWidth="10.0" prefWidth="70.0" text="Time" />
       </columns>
     </TableView>
     <TableView fx:id="tableSong" layoutX="561.0" layoutY="203.0" prefHeight="393.0" prefWidth="301.0">
       <columns>
-        <TableColumn prefWidth="75.0" text="Title" fx:id="columnTitle" />
-        <TableColumn prefWidth="75.0" text="Artist" fx:id="columnArtist2" />
-        <TableColumn prefWidth="75.0" text="Category" fx:id="columnCategory" />
-        <TableColumn prefWidth="75.0" text="Time" fx:id="columnTime2" />
+        <TableColumn fx:id="columnTitle" prefWidth="75.0" text="Title" />
+        <TableColumn fx:id="columnArtist2" prefWidth="75.0" text="Artist" />
+        <TableColumn fx:id="columnCategory" prefWidth="75.0" text="Category" />
+        <TableColumn fx:id="columnTime2" prefWidth="75.0" text="Time" />
       </columns>
     </TableView>
     <Label layoutX="507.0" layoutY="64.0" text="Filter:" />

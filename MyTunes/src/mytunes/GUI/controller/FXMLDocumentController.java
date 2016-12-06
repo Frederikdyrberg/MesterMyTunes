@@ -56,8 +56,6 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Button moveSong;
     @FXML
-    private Button close;
-    @FXML
     private Slider slider;
     @FXML
     private Button deletePlaylistSong;
@@ -85,6 +83,8 @@ public class FXMLDocumentController implements Initializable {
     private TableView<MyTunes> tablePlaylist;
     @FXML
     private TableView<MyTunes> tableSong;
+    @FXML
+    private Button closeApp;
     
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
@@ -189,5 +189,14 @@ public class FXMLDocumentController implements Initializable {
             loadMyTunesSongView(selectedSong);
 
     }
+
+    @FXML
+    private void closeApp(ActionEvent event) {
+
+     // get a handle to the stage
+    Stage stage = (Stage) closeApp.getScene().getWindow();
+    // do what you have to do
+    stage.close();
+}
 }
 
